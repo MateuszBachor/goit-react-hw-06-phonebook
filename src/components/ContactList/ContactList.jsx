@@ -6,7 +6,6 @@ import styles from './ContactList.module.css';
 const ContactList = () => {
   const contactList = useSelector(state => state.items);
   const filterState = useSelector(state => state.filter);
-  console.log(filterState);
   const dispatch = useDispatch();
   const remove = id => {
     dispatch(removeContact(id));
