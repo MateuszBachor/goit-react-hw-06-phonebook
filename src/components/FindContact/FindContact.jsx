@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './FindContact.module.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { filter } from './../../redux/actions';
 
 const FindContact = () => {

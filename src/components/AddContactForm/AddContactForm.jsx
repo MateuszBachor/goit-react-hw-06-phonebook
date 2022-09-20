@@ -1,5 +1,4 @@
 import React from 'react';
-import { createRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from './../../redux/actions';
 import styles from './AddContactForm.module.css';

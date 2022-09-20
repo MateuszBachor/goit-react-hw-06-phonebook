@@ -1,17 +1,17 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeContact, filter } from './../../redux/actions';
+import { removeContact } from './../../redux/actions';
 import styles from './ContactList.module.css';
 
 const ContactList = () => {
   const contactList = useSelector(state => state.items);
-  const filteState = useSelector(state => state.filter);
-  console.log(filteState);
+  const filterState = useSelector(state => state.filter);
+  console.log(filterState);
   const dispatch = useDispatch();
   const remove = id => {
     dispatch(removeContact(id));
   };
-  if (filteState === null) {
+  if (filterState === null) {
     return contactList.map(contact => {
       return (
         <li className={styles.contactLi} key={contact.id}>
@@ -29,7 +29,7 @@ const ContactList = () => {
     });
   }
   return contactList
-    .filter(el => el.name.toLowerCase().includes(filteState.toLowerCase()))
+    .filter(el => el.name.toLowerCase().includes(filterState.toLowerCase()))
     .map(contact => {
       return (
         <li className={styles.contactLi} key={contact.id}>
