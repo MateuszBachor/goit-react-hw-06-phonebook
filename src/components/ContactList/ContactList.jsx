@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeContact } from './../../redux/actions';
 import styles from './ContactList.module.css';
+import { FaTrash } from 'react-icons/fa';
 
 const ContactList = () => {
   const contactList = useSelector(state => state.items);
@@ -21,7 +22,7 @@ const ContactList = () => {
             }}
             className={styles.deleteBtn}
           >
-            Delete
+            <FaTrash />
           </button>
         </li>
       );
@@ -39,7 +40,7 @@ const ContactList = () => {
               remove(contact.id);
             }}
           >
-            Delete
+            <FaTrash />
           </button>
         </li>
       );

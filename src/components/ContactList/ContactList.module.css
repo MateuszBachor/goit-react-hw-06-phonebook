@@ -1,19 +1,22 @@
 .deleteBtn{
-    border-radius: 11%;
-    border: 1px solid lightgray;
-    width: 56px;
-    font-size: 10px;
+    /* border-radius: 11%;
+    border: 1px solid lightgray; */
+    border: none;
+    /* width: 56px; */
+    font-size: 15px;
     font-weight: 600;
     height: 18px;
-    margin: 10px;
+    margin: 10px; 
     background-color: white;
 }
 .deleteBtn:hover{
 
     cursor: pointer;
-    box-shadow: 1px 1px 10px blue;
+    /* box-shadow: 1px 1px 10px blue; */
 }
 .contactLi{
     margin-left: 120px;
+    margin: 20px;
     font-weight: 600;
+    list-style-type: none;
 }

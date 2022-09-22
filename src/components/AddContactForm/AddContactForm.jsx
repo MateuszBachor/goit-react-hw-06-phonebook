@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from './../../redux/actions';
 import styles from './AddContactForm.module.css';
+import { FaPlus } from 'react-icons/fa';
 
 const AddContactForm = () => {
   const contactList = useSelector(state => state.items);
@@ -50,7 +51,10 @@ const AddContactForm = () => {
           />
         </div>
         <button className={styles.formBtn} type="submit">
-          Add contact
+          Add contact{' '}
+          <span className={styles.addSvg}>
+            <FaPlus />
+          </span>
         </button>
       </form>
     </div>

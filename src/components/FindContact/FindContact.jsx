@@ -8,10 +8,13 @@ const FindContact = () => {
   const onChange = e => dispatch(filter(e.target.value));
   return (
     <div>
-      <h2 className={styles.contactsTitle}>Contacts</h2>
       <div className={styles.findDiv}>
-        <label>Find contacts by name</label>
-        <input onChange={onChange} type="text" />
+        <input
+          className={styles.findInput}
+          placeholder="Find contacts by name..."
+          onChange={onChange}
+          type="text"
+        />
       </div>
     </div>
   );
